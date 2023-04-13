@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="body">
+        <div class="picture">
+            <img [src]="img" alt="">
+        </div>
+        <div class="user-data">
+            <div class="user-data-item">
+                <h2>{{name}}</h2>
+                <div class="edit-body">
+                    <input type="text" id="newName" placeholder="Write new name" #newName>
+                    <button class="network" (click)="editName(newName.value); newName.value=''">Edit</button>
+                </div>
+            </div>
+            <div class="user-data-item">
+                <div class="status-text">{{status}}</div>
+                <div class="edit-body">
+                    <input type="text" id="newStatus" placeholder="Write new status" #newStatus>
+                    <button class="network" (click)="editStatus(newStatus.value); newStatus.value=''">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="group">
+    <p><b>Group Name:</b><span>{{ groupName }}</span></p>
+</div>
+</div>
+
